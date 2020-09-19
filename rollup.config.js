@@ -2,6 +2,7 @@ import babel from '@rollup/plugin-babel'
 import commonjs from '@rollup/plugin-commonjs'
 import resolve from '@rollup/plugin-node-resolve'
 import serve from 'rollup-plugin-serve'
+import livereload from 'rollup-plugin-livereload'
 import replace from '@rollup/plugin-replace'
 import { terser } from 'rollup-plugin-terser'
 import path from 'path'
@@ -39,6 +40,9 @@ if (process.env.NODE_ENV === 'development') {
       contentBase: ['dist', 'public'],
       host: 'localhost',
       port: 10001,
+    }),
+    livereload({
+      watch: 'dist',
     })
   )
 }
