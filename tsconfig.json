@@ -1,0 +1,13 @@
+/* Visit https://aka.ms/tsconfig.json to read more about this file */
+{
+  "compilerOptions": {
+    "jsx": "preserve",
+
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "strict": true
+  },
+  "include": ["src", "./type.d.ts"],
+  "exclude": ["node_modules", "dist"]
+}
