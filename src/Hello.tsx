@@ -1,6 +1,6 @@
 import { withModifiers, defineComponent, ref } from 'vue'
 
-const Hello = defineComponent({
+export const Hello = defineComponent({
   setup() {
     const count = ref(0)
 
@@ -10,12 +10,10 @@ const Hello = defineComponent({
 
     return () => (
       <div>
-        <h1>Hello Vue!</h1>
+        <h1>Hello World!</h1>
         <h2>Counter: {count.value}</h2>
         <button onClick={withModifiers(inc, ['self'])}>inc</button>
       </div>
     )
   },
 })
-
-export default Hello

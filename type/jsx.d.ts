@@ -1,9 +1,9 @@
-import { VNode } from 'vue';
+import { VNode } from 'vue'
 declare global {
   namespace JSX {
     interface Element extends VNode {}
     interface IntrinsicElements {
-      [elem: string]: any;
+      [elem: string]: any
     }
   }
 }

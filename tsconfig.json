@@ -2,12 +2,18 @@
 {
   "compilerOptions": {
     "jsx": "preserve",
-
+    "baseUrl": ".",
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "node",
-    "strict": true
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": ["esnext", "dom"],
+    "paths": {
+      "@lib": ["src"]
+    },
+    "plugins": [{ "name": "typescript-plugin-css-modules" }]
   },
-  "include": ["src", "./type.d.ts"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["src", "example", "type"],
+  "exclude": ["node_modules", "dist", ".temp"]
 }
